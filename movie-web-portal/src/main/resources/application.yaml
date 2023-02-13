@@ -1,0 +1,24 @@
+# 服务器端口
+server:
+  port: 8081
+
+#数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///heima_movie
+    username: root
+    password: 123456
+
+# mybatis简单配置
+mybatis-plus:
+  mapper-locations: classpath:mappers/** # 指定mapper映射文件
+  configuration:
+    map-underscore-to-camel-case: true # 开启驼峰式映射
+
+# 阿里配置
+al:
+  vod: # 视频
+    regionId: cn-shenzhen
+    accessKeyId: LTAI5tSBnMuRRtkudkEjNYcS
+    accessKeySecret: O018A8gBM4IQN2IpTVFgDec2ZZj7R6

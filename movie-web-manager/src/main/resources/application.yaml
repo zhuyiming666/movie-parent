@@ -1,0 +1,36 @@
+# 服务器端口
+server:
+  port: 8080
+
+#数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///heima_movie
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 2000MB
+      max-request-size: 2000MB
+
+# mybatis简单配置
+mybatis-plus:
+  mapper-locations: classpath:mappers/** # 指定mapper映射文件
+  configuration:
+    map-underscore-to-camel-case: true # 开启驼峰式映射
+
+
+# 阿里配置
+al:
+  oss: #存储
+    endpoint: oss-cn-guangzhou.aliyuncs.com
+    accessKeyId: LTAI5tSBnMuRRtkudkEjNYcS
+    accessKeySecret: O018A8gBM4IQN2IpTVFgDec2ZZj7R6
+    bucketName: movie-zym
+    url: https://movie-zym.oss-cn-guangzhou.aliyuncs.com
+  vod:
+    regionId: cn-shenzhen
+    accessKeyId: LTAI5tSBnMuRRtkudkEjNYcS
+    accessKeySecret: O018A8gBM4IQN2IpTVFgDec2ZZj7R6
